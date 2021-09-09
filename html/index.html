@@ -20,19 +20,27 @@
 </head>
 <body>
     <header>
-        <nav>
-            <button type="button" id="hum-toggle" class="hum-toggle">
-                <div class="line-1"></div>
-                <div class="line-2"></div>
-                <div class="line-3"></div>
+        <nav id="hum-aco-menu" class="hum-aco-menu">
+
+            <button id="hum-button hum-act" class="hum-button">
+                <div class="lines__container hum-act">
+                    <div class="line buns-top hum-act"></div>
+                    <div class="line patty hum-act"></div>
+                    <div class="line buns-bottom hum-act"></div>
+                </div>
             </button>
-            
+
             <ul id="accordion" class="accordion">
-              <li class="accordion_title">ACCORDION MENU</li>
               <li><a href="../html/index.html">TOP</a></li>
+              <!-- バンズ上 -->
+              <div class="line-1"></div>
               <li><a href="../html/photo.html">PHOTO</a></li>
               <li><a href="../html/video.html">VIDEO</a></li>
+              <!-- パテ中 -->
+              <div class="line-2"></div>
               <li><a href="../html/form.html">FORM</a></li>
+              <!-- ハンズ下 -->
+              <div class="line-3"></div>
             </ul>
         </nav>
     </header>
