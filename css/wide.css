@@ -49,6 +49,9 @@ header {
 }
 
 .hum-button.active {
+    position: fixed;
+    width: 600px;
+    height: 600px;
     background-color: blue;
 }
 
@@ -63,7 +66,6 @@ header {
 .line {
     width: 40px;
     height: 12px;
-    background-color: olivedrab;
 }
 
 .buns-top {
@@ -77,7 +79,24 @@ header {
 }
 
 .buns-bottom {
-    border-radius: 0 0 20% 20%;
+    background-color: gold;
+}
+
+.buns-top.active {
+    width: 350px;
+    height: 100px;
+    border-radius: 85% 85% 0 0;
+}
+
+.patty.active {
+    width: 350px;
+    height: 60px;
+}
+
+.buns-bottom.active {
+    width: 350px;
+    height: 75px;
+    border-radius: 0 0 10% 10%;
     background-color: gold;
 }
 
