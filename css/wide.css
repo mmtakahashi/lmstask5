@@ -49,10 +49,13 @@ header {
 }
 
 .hum-button.active {
-    position: fixed;
+    position: inherit;
+    bottom: 80%;
     width: 600px;
     height: 600px;
-    background-color: blue;
+    background-color: turquoise;
+    transition: 0.6s;
+
 }
 
 .lines__container {
@@ -86,11 +89,13 @@ header {
     width: 350px;
     height: 100px;
     border-radius: 85% 85% 0 0;
+    transition: 0.6s;
 }
 
 .patty.active {
     width: 350px;
     height: 60px;
+    transition: 0.6s;
 }
 
 .buns-bottom.active {
@@ -98,16 +103,31 @@ header {
     height: 75px;
     border-radius: 0 0 10% 10%;
     background-color: gold;
+    transition: 0.6s;
 }
 
-.accordion {
-    visibility: hidden;
+.topping {
+  display: none;
+  width: 300px;
+  height: 20px;
 }
 
-.accordion.active {
-    visibility: visible;
+.topping.active {
+    display: block;
 }
 
+.cheese-photo.active {
+    /* display: block; */
+    background-color: yellow;
+}
+.tomato-video {
+    /* display: block; */
+    background-color: red;
+}
+.lettuce-form {
+    /* display: block; */
+    background-color: greenyellow;
+}
 
 /* ==========================
    Index style

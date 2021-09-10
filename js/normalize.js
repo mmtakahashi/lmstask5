@@ -18,6 +18,8 @@ window.addEventListener('load',() => {
         document.getElementById('buns-top').classList.toggle('active');
         document.getElementById('patty').classList.toggle('active');
         document.getElementById('buns-bottom').classList.toggle('active');
-        document.getElementById('accordion').classList.toggle('active');
+        document.getElementById('cheese-photo').classList.toggle('active');
+        document.getElementById('tomato-video').classList.toggle('active');
+        document.getElementById('lettuce-form').classList.toggle('active');
     })
 });
