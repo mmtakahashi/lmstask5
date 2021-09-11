@@ -12,14 +12,51 @@
 
 window.addEventListener('load',() => {
     const humToggle = document.getElementById('hum-button');
+    const closeButton = document.getElementById('close-button');
+
     humToggle.addEventListener('click',() => {
-        humToggle.classList.toggle('active');
-        document.getElementById('lines__container').classList.toggle('active');
-        document.getElementById('buns-top').classList.toggle('active');
-        document.getElementById('patty').classList.toggle('active');
-        document.getElementById('buns-bottom').classList.toggle('active');
-        document.getElementById('cheese-photo').classList.toggle('active');
-        document.getElementById('tomato-video').classList.toggle('active');
-        document.getElementById('lettuce-form').classList.toggle('active');
+        
+        
+        // (e.target != e.currentTarget)
+        
+        if(!humToggle.classList.contains('active')){
+            humToggle.classList.add('active');
+            closeButton.classList.add('active');
+            document.getElementById('lines__container').classList.add('active');
+            document.getElementById('buns-top').classList.add('active');
+            document.getElementById('patty').classList.add('active');
+            document.getElementById('buns-bottom').classList.add('active');
+            document.getElementById('cheese-photo').classList.add('active');
+            document.getElementById('tomato-video').classList.add('active');
+            document.getElementById('lettuce-form').classList.add('active');
+        }
+        
+        // else {
+        //     console.log('Hallo');
+        //     humToggle.classList.remove('active');
+        //     document.getElementById('lines__container').classList.remove('active');
+        //     document.getElementById('buns-top').classList.remove('active');
+        //     document.getElementById('patty').classList.remove('active');
+        //     document.getElementById('buns-bottom').classList.remove('active');
+        //     document.getElementById('cheese-photo').classList.remove('active');
+        //     document.getElementById('tomato-video').classList.remove('active');
+        //     document.getElementById('lettuce-form').classList.remove('active');
+            
+        // }
+
     })
+    closeButton.addEventListener('click',() => {
+    console.log('Hallo');
+    humToggle.classList.remove('active');
+    closeButton.classList.remove('active');
+
+    document.getElementById('lines__container').classList.remove('active');
+    document.getElementById('buns-top').classList.remove('active');
+    document.getElementById('patty').classList.remove('active');
+    document.getElementById('buns-bottom').classList.remove('active');
+    document.getElementById('cheese-photo').classList.remove('active');
+    document.getElementById('tomato-video').classList.remove('active');
+    document.getElementById('lettuce-form').classList.remove('active');
+    })
+
 });

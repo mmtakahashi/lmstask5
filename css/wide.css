@@ -39,7 +39,7 @@ header {
 /* --- ハンバーガーボタン --- */
 
 .hum-button {
-    position: absolute;
+    position: relative;
     left: 0.5%;
     bottom: 4%;
     width: 80px;
@@ -75,6 +75,7 @@ header {
     border-radius: 30% 30% 0 0;
     background-color: gold;
 }
+
 
 .patty {
     border-radius: 10%;
@@ -114,6 +115,7 @@ header {
 
 .topping.active {
     display: block;
+    margin: auto;
 }
 
 .cheese-photo.active {
@@ -127,6 +129,72 @@ header {
 .lettuce-form {
     /* display: block; */
     background-color: greenyellow;
+}
+
+#close-button {
+    width: 1px;
+    height: 1px;
+    visibility: hidden;
+}
+
+#close-button.active {
+    visibility: visible;
+    position: fixed;
+    left: 520px;
+    bottom: 210px;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    transition: 0.6s;
+    background-color: orange;
+}
+
+.x-line {
+    width: 30px;
+    height: 5px;
+    background-color: white;
+}
+
+/* --- アコーディオン --- */
+
+summary {
+    display: block;
+    list-style: none;
+  }
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.buns-top.active:hover,
+.patty.active:hover {
+animation: shake .1s linear;
+animation-iteration-count: 4;
+}
+
+
+
+@keyframes shake {
+0% {
+    transform: translateX(0);
+    transform: translateY(0);
+}
+
+40% {
+    transform: translateX(-3%);
+    transform: translateY(8%);
+
+}
+
+80% {
+    transform: translateX(3%);
+    transform: translateY(-8%);
+
+}
+
+100% {
+    transform: translateX(0);
+}
 }
 
 /* ==========================
