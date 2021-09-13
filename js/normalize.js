@@ -22,6 +22,7 @@ window.addEventListener('load',() => {
         if(!humToggle.classList.contains('active')){
             humToggle.classList.add('active');
             closeButton.classList.add('active');
+            document.getElementById('flag-home').classList.add('active');
             document.getElementById('lines__container').classList.add('active');
             document.getElementById('buns-top').classList.add('active');
             document.getElementById('patty').classList.add('active');
@@ -36,7 +37,7 @@ window.addEventListener('load',() => {
     console.log('Hallo');
     humToggle.classList.remove('active');
     closeButton.classList.remove('active');
-
+    document.getElementById('flag-home').classList.remove('active');
     document.getElementById('lines__container').classList.remove('active');
     document.getElementById('buns-top').classList.remove('active');
     document.getElementById('patty').classList.remove('active');

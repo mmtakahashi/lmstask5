@@ -15,28 +15,53 @@
 <!-- Gogle Fonts -->
 
 <!-- Main Stylesheet Files -->
-<link rel="stylesheet" href="/css/wide.css">
+<link rel="stylesheet" href="../css/wide.css">
 
 </head>
 <body>
-    <header>
-        <nav>
-            <button type="button" id="hum-toggle" class="hum-toggle">
-                <div class="line-1"></div>
-                <div class="line-2"></div>
-                <div class="line-3"></div>
-            </button>
-            
-            <ul class="accordion">
-              <li class="accordion_title">ACCORDION MENU</li>
-              <li><a href="../html/index.html">TOP</a></li>
-              <li><a href="../html/photo.html">PHOTO</a></li>
-              <li><a href="../html/video.html">VIDEO</a></li>
-              <li><a href="../html/form.html">FORM</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
     <h1>Form</h1>
+
+    <nav id="hum-aco-menu" class="hum-aco-menu">
+
+        <button id="hum-button" class="hum-button">
+
+            
+            <div id="lines__container" class="lines__container">
+
+                <div id="flag-home" class="flag-home topping"><a href="../html/index.html">HOME</a></div>
+
+                <details>
+                    
+                    <summary>
+                        <div id="buns-top" class="line buns buns-top"></div>
+                    </summary>
+
+                    <div id="cheese-photo" class="cheese-photo topping"><a href="../html/photo.html">PHOTO</a></div>
+                    <div id="tomato-video" class="tomato-video topping"><a href="../html/video.html">VIDEO</a></div>
+
+                </details>
+                <details>
+
+                    <summary>
+                        <div id="patty" class="line patty"></div>
+                    </summary>
+
+                    <div id="lettuce-form" class="lettuce-form topping"><a href="../html/form.html">FORM</a></div>
+                    
+                </details>
+
+                <div id="buns-bottom" class="line buns buns-bottom"></div>
+
+            </div>
+            <button id="close-button">
+                <div class="x-line"></div>
+                <div class="x-line"></div>
+            </button>
+        </button>
+
+    </nav>
+</header>
 
 <!-- Java Script -->
 <script src="/js/normalize.js"></script>
