@@ -19,6 +19,7 @@ html, body {
    General styles
    ========================== */
 
+
 a {
     text-decoration: none;
 }
@@ -39,7 +40,7 @@ header {
 /* --- ハンバーガーボタン --- */
 
 .hum-button {
-    position: relative;
+    position: absolute;
     left: 0.5%;
     bottom: 4%;
     width: 80px;
@@ -72,7 +73,7 @@ header {
 }
 
 .buns-top {
-    border-radius: 30% 30% 0 0;
+    border-radius: 10% 10% 0 0;
     background-color: gold;
 }
 
@@ -89,14 +90,19 @@ header {
 .buns-top.active {
     width: 350px;
     height: 100px;
-    border-radius: 85% 85% 0 0;
+    border-radius: 85% 85% 5% 5%;
     transition: 0.6s;
+    background: -moz-radial-gradient(#F13F79 20%, #FFC778 70%); 
+    background: -webkit-radial-gradient(#F13F79 20%, #FFC778 70%); 
+    background: radial-gradient(#ffc400 50%, #ffdf75 80%);
 }
 
 .patty.active {
     width: 350px;
-    height: 60px;
+    height: 65px;
+    border-radius: 30%;
     transition: 0.6s;
+    background: radial-gradient(#da7d1b 60%, #e69c2d 80%);
 }
 
 .buns-bottom.active {
@@ -105,12 +111,13 @@ header {
     border-radius: 0 0 10% 10%;
     background-color: gold;
     transition: 0.6s;
+    background: radial-gradient(#ffc400 50%, #ffdf75 80%);
 }
 
 .topping {
   display: none;
   width: 300px;
-  height: 20px;
+  height: 30px;
 }
 
 .topping.active {
@@ -166,13 +173,13 @@ summary::-webkit-details-marker {
     display: none;
 }
 
+/* --- アニメーション --- */
+
 .buns-top.active:hover,
 .patty.active:hover {
 animation: shake .1s linear;
 animation-iteration-count: 4;
 }
-
-
 
 @keyframes shake {
 0% {

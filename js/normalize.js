@@ -30,19 +30,6 @@ window.addEventListener('load',() => {
             document.getElementById('tomato-video').classList.add('active');
             document.getElementById('lettuce-form').classList.add('active');
         }
-        
-        // else {
-        //     console.log('Hallo');
-        //     humToggle.classList.remove('active');
-        //     document.getElementById('lines__container').classList.remove('active');
-        //     document.getElementById('buns-top').classList.remove('active');
-        //     document.getElementById('patty').classList.remove('active');
-        //     document.getElementById('buns-bottom').classList.remove('active');
-        //     document.getElementById('cheese-photo').classList.remove('active');
-        //     document.getElementById('tomato-video').classList.remove('active');
-        //     document.getElementById('lettuce-form').classList.remove('active');
-            
-        // }
 
     })
     closeButton.addEventListener('click',() => {
