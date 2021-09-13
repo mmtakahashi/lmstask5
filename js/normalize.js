@@ -47,4 +47,37 @@ window.addEventListener('load',() => {
     document.getElementById('lettuce-form').classList.remove('active');
     })
 
+    // フォトギャラリー
+    let album = [
+        {src: '../img/amuro.png', msg: '女に作戦を聞くわけにはいかない'},
+        {src: '../img/bright.png', msg: '殴ってなぜ悪いか'},
+        {src: '../img/garma.png', msg: 'ガルマの肖像画'}
+    ];
+
+    let mainImage = document.createElement('img');
+    mainImage.setAttribute('src', album[0].src);
+    mainImage.setAttribute('alt', album[0].msg);
+
+    let mainMsg = document.createElement('p');
+    mainMsg.innerText = mainImage.alt;
+
+    let mainFlame = document.querySelector('#photo-gallery .main-photo');
+    mainFlame.insertBefore(mainImage, null);
+    mainFlame.insertBefore(mainMsg, null);
+
+    let thumbFlame = document.querySelector('#photo-gallery .thumb-photo');
+    for (let i = 0; i < album.length; i++) {
+        let thumbImage = document.createElement('img');
+        thumbImage.setAttribute('src', album[i].src);
+        thumbImage.setAttribute('alt', album[i].msg);
+        thumbFlame.insertBefore(thumbImage, null);
+    }
+
+    thumbFlame.addEventListener('click',(event) => {
+        if (event.target.src) {
+            mainImage.src = event.target.src;
+            mainMsg.innerText = ecent.target.alt;
+        }
+    })
+
 });

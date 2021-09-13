@@ -213,6 +213,34 @@ animation-iteration-count: 4;
    Photo Gallery style
    ========================== */
 
+#photo-gallery {
+margin: auto;
+padding-top: 15%;
+width: 500px;
+text-align: center;
+}
+
+#photo-gallery .main-photo img {
+border: 4px solid #fff;
+box-shadow: 0px 0px 14px #000;
+width: 100%;
+}
+
+#photo-gallery .main-photo p {
+color: #bbb;
+font-size: 20px;
+font-weight: bold;
+}
+
+#photo-gallery .thumb-photo img {
+border:4px solid #fff;
+border-radius: 400px;
+box-shadow: 0px 0px 10px #000;
+height: 60px;
+margin: 10px;
+width: 60px;
+}
+  
 
 
 /* ==========================
