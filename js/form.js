@@ -1,15 +1,3 @@
-// ハンバーガーメニュー押下時にアクティブに切り替える
-// window.addEventListener('load',() => {
-//     const humToggle = document.querySelectorAll('.hum-act');
-//     humToggle.forEach(act => {
-//         act.addEventListener('click', () => {
-//             // console.log('Hallo');
-//             // humToggle.classList.toggle('active');
-//             document.querySelector('.accordion').classList.toggle('active');
-//         });
-//     });
-// });
-
 window.addEventListener('load',() => {
     const humToggle = document.getElementById('hum-button');
     const closeButton = document.getElementById('close-button');
@@ -46,7 +34,6 @@ window.addEventListener('load',() => {
     document.getElementById('tomato-video').classList.remove('active');
     document.getElementById('lettuce-form').classList.remove('active');
     })
-
   
 });
 

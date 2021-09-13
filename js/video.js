@@ -1,15 +1,3 @@
-// ハンバーガーメニュー押下時にアクティブに切り替える
-// window.addEventListener('load',() => {
-//     const humToggle = document.querySelectorAll('.hum-act');
-//     humToggle.forEach(act => {
-//         act.addEventListener('click', () => {
-//             // console.log('Hallo');
-//             // humToggle.classList.toggle('active');
-//             document.querySelector('.accordion').classList.toggle('active');
-//         });
-//     });
-// });
-
 window.addEventListener('load',() => {
     const humToggle = document.getElementById('hum-button');
     const closeButton = document.getElementById('close-button');
@@ -47,6 +35,17 @@ window.addEventListener('load',() => {
     document.getElementById('lettuce-form').classList.remove('active');
     })
 
+//   ビデオギャラリー
+  const KEY = 'AIzaSyAfzZ0fO9BUY5qjsFfXAf60lXM7rRq4rHM';
+  let url = 'https://www.googleapis.com/youtube/v3/search?';
+  url += 'type=video';            // 動画を検索する
+  url += '&part=snippet';         // 検索結果にすべてのプロパティを含む
+  url += '&q=music';              // 検索ワード このサンプルでは music に指定
+  url += '&videoEmbeddable=true'; // Webページに埋め込み可能な動画のみを検索
+  url += '&videoSyndicated=true'; // youtube.com 以外で再生できる動画のみに限定
+  url += '&maxResults=6';         // 動画の最大取得件数
+  url += '&key=' + KEY;           // API KEY
+  console.log(url);
   
 });
 

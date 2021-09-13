@@ -1,15 +1,3 @@
-// ハンバーガーメニュー押下時にアクティブに切り替える
-// window.addEventListener('load',() => {
-//     const humToggle = document.querySelectorAll('.hum-act');
-//     humToggle.forEach(act => {
-//         act.addEventListener('click', () => {
-//             // console.log('Hallo');
-//             // humToggle.classList.toggle('active');
-//             document.querySelector('.accordion').classList.toggle('active');
-//         });
-//     });
-// });
-
 window.addEventListener('load',() => {
     const humToggle = document.getElementById('hum-button');
     const closeButton = document.getElementById('close-button');
@@ -47,6 +35,41 @@ window.addEventListener('load',() => {
     document.getElementById('lettuce-form').classList.remove('active');
     })
 
+    // アルバムデータの作成
+    let album = [
+    { src: '../img/amuro.png', msg: '女に作戦を聞くわけにはいかない'},
+    { src: '../img/bright.png', msg: '殴ってなぜ悪いか'},
+    { src: '../img/garma.png', msg: 'ガルマの肖像画'},
+    ];
+  
+    // 最初のデータを表示しておく
+    let mainImage = document.createElement('img');
+    mainImage.setAttribute('src', album[0].src);
+    mainImage.setAttribute('alt', album[0].msg);
+
+    let mainMsg = document.createElement('p');
+    mainMsg.innerText = mainImage.alt;
+
+    let mainFlame = document.querySelector('#photo-gallery .main-photo');
+    mainFlame.insertBefore(mainImage, null);
+    mainFlame.insertBefore(mainMsg, null);
+
+    // サムネイル画像の表示
+    let thumbFlame = document.querySelector('#photo-gallery .thumb-photo');
+    for (let i = 0; i < album.length; i++) {
+    let thumbImage = document.createElement('img');
+    thumbImage.setAttribute('src', album[i].src);
+    thumbImage.setAttribute('alt', album[i].msg);
+    thumbFlame.insertBefore(thumbImage, null);
+    }
+
+    // クリックした画像をメインにする
+    thumbFlame.addEventListener('click', function(event) {
+    if (event.target.src) {
+        mainImage.src = event.target.src;
+        mainMsg.innerText = event.target.alt;
+    }
+ })
   
 });
 
