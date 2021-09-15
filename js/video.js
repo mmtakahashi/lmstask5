@@ -36,16 +36,37 @@ window.addEventListener('load',() => {
     })
 
 //   ビデオギャラリー
-  const KEY = 'AIzaSyAfzZ0fO9BUY5qjsFfXAf60lXM7rRq4rHM';
-  let url = 'https://www.googleapis.com/youtube/v3/search?';
-  url += 'type=video';            // 動画を検索する
-  url += '&part=snippet';         // 検索結果にすべてのプロパティを含む
-  url += '&q=music';              // 検索ワード このサンプルでは music に指定
-  url += '&videoEmbeddable=true'; // Webページに埋め込み可能な動画のみを検索
-  url += '&videoSyndicated=true'; // youtube.com 以外で再生できる動画のみに限定
-  url += '&maxResults=6';         // 動画の最大取得件数
-  url += '&key=' + KEY;           // API KEY
-  console.log(url);
-  
+    const KEY = 'AIzaSyAfzZ0fO9BUY5qjsFfXAf60lXM7rRq4rHM';
+    let url = 'https://www.googleapis.com/youtube/v3/search?';
+    url += 'type=video';            // 動画を検索する
+    url += '&part=snippet';         // 検索結果にすべてのプロパティを含む
+    url += '&q=music';              // 検索ワード このサンプルでは music に指定
+    url += '&videoEmbeddable=true'; // Webページに埋め込み可能な動画のみを検索
+    url += '&videoSyndicated=true'; // youtube.com 以外で再生できる動画のみに限定
+    url += '&maxResults=4';         // 動画の最大取得件数
+    url += '&key=' + KEY;           // API KEY
+    
+    const videoGallery = document.getElementById('video-gallery');
+
+    const callApi = async () => {
+        const response = await fetch(url);
+        const json = await response.json();
+        // const JSON = JSON.parse(json);
+        // const items = json.items;
+        // const id = items[i].id;
+        // console.log(videoID);
+        let video = '';
+        let result = '';
+        for (let i = 0; i < json.items.length; i++) {
+            
+            video = '<iframe src="https://www.youtube.com/embed/';
+            video += json.items[i].id.videoId;
+            video += '"></iframe>';
+            result+= '<div class="video">' + video + '</div>'
+            videoGallery.innerHTML = result;
+        }
+    }
+    callApi();
+
 });
 
