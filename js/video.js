@@ -51,12 +51,9 @@ window.addEventListener('load',() => {
     const callApi = async () => {
         const response = await fetch(url);
         const json = await response.json();
-        // const JSON = JSON.parse(json);
-        // const items = json.items;
-        // const id = items[i].id;
-        // console.log(videoID);
         let video = '';
         let result = '';
+        
         for (let i = 0; i < json.items.length; i++) {
             
             video = '<iframe src="https://www.youtube.com/embed/';
