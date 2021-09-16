@@ -40,10 +40,10 @@ window.addEventListener('load',() => {
     let url = 'https://www.googleapis.com/youtube/v3/search?';
     url += 'type=video';            // 動画を検索する
     url += '&part=snippet';         // 検索結果にすべてのプロパティを含む
-    url += '&q=music';              // 検索ワード このサンプルでは music に指定
+    url += '&q=pink noise';         // 検索ワード このサンプルでは pink noise に指定
     url += '&videoEmbeddable=true'; // Webページに埋め込み可能な動画のみを検索
     url += '&videoSyndicated=true'; // youtube.com 以外で再生できる動画のみに限定
-    url += '&maxResults=4';         // 動画の最大取得件数
+    url += '&maxResults=6';         // 動画の最大取得件数
     url += '&key=' + KEY;           // API KEY
     
     const videoGallery = document.getElementById('video-gallery');
@@ -53,7 +53,7 @@ window.addEventListener('load',() => {
         const json = await response.json();
         let video = '';
         let result = '';
-        
+
         for (let i = 0; i < json.items.length; i++) {
             
             video = '<iframe src="https://www.youtube.com/embed/';

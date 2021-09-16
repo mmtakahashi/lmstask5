@@ -32,6 +32,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 20;
     width: 100%;
     height: 20%;
     background-color: red;
@@ -247,6 +248,27 @@ width: 60px;
    Video Gallery style
    ========================== */
 
+#video-gallery {
+    z-index: 10;
+    width: 50%;
+    margin: 20% auto;
+}
+
+.video {
+	position:relative;
+	width:90%;
+	padding-top:55%;
+    margin: 10% auto;
+}
+
+.video iframe{
+	position:absolute;
+    width:90%;
+	height:90%;
+	top:0;
+    box-shadow: 0 0 20px;
+    border: none;
+}
 
 
 /* ==========================
