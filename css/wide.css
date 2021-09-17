@@ -19,6 +19,10 @@ html, body {
    General styles
    ========================== */
 
+h1 {
+    color: white;
+    margin: 10px 0 0 10px;
+}
 
 a {
     text-decoration: none;
@@ -275,7 +279,18 @@ width: 60px;
    Form Gallery style
    ========================== */
 
+#form-wrappar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 form {
     position: absolute;
-    bottom: 20%;
+    width: 60%;
+    bottom: 10%;
+}
+
+input, textarea {
+    border-style: inset;
 }
