@@ -275,3 +275,7 @@ width: 60px;
    Form Gallery style
    ========================== */
 
+form {
+    position: absolute;
+    bottom: 20%;
+}

@@ -34,6 +34,28 @@ window.addEventListener('load',() => {
     document.getElementById('tomato-video').classList.remove('active');
     document.getElementById('lettuce-form').classList.remove('active');
     })
-  
+    
+    
+    // フォームの要素を取得
+    let textArea = document.getElementById('textarea');
+
+    // textAreaからmaxlengthの値を取得
+    let maxTextNum = textArea.getAttribute('maxlength');
+
+    // ②入力されると文字数制限の文言が挿入される
+    const zanlength = textArea.addEventListener('input', () => {
+        let currentTextNum = textArea.value.length;
+        hiku = maxTextNum - currentTextNum;
+        textMsg.innerHTML = '<p>あと' + hiku + '字入力可</p>';
+    })
+
+    // 残り文字数を表示する要素の追加
+    let textMsg = document.createElement('div');
+    let parent = textArea.parentElement;
+    parent.insertBefore(textMsg, textArea.nextSibling);
+
+    // ①最初から表示されている(フォーム入力で②に置き換わる)
+    textMsg.innerHTML = '<p>あと' + 500 + '文入力可</p>';
+
 });
 
